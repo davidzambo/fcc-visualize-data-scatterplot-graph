@@ -16,10 +16,19 @@
     <link rel="stylesheet" href="./styles/css/styles.css">
 </head>
 <body>
-<div class="container"></div>
+<div class="container">
+    <div id="tooltip" class="">
+        <p><strong>Name: </strong><a id="name"></a></p>
+        <p><strong>Nationality: </strong><span id="nationality"></span></p>
+        <p><strong>Place: </strong><span id="place"></span></p>
+        <p><strong>Time: </strong><span id="time"></span></p>
+        <p><strong>Year: </strong><span id="year"></span></p>
+        <p><strong>Doping: </strong><span id="doping"></span></p>
+    </div>
+</div>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/d3-time.v1.min.js"></script>
-<script src="https://d3js.org/d3-format.v1.min.js"></script>
+<script src="https://d3js.org/d3-time-format.v2.min.js"></script>
 <script src="./js/scripts.js"></script>
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
