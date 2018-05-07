@@ -1,45 +1,55 @@
-@import url("https://fonts.googleapis.com/css?family=Archivo+Narrow");
+@import url("https://fonts.googleapis.com/css?family=Rajdhani");
 html,
 body {
   height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
-  font-family: 'Archivo Narrow', sans-serif; }
+  font-family: 'Rajdhani', sans-serif; }
 
 .container {
   min-height: 100%;
   margin: auto;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0), black), url("../../images/mountain-road.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)), url("../../images/mountain-road.jpg") no-repeat center;
   display: flex;
   flex-direction: column;
   justify-content: flex-end; }
-  .container h1, .container h4 {
+  .container h1, .container h3, .container h4 {
     text-align: center;
-    margin-bottom: 0; }
-  .container h4 {
+    margin-bottom: 0;
+    letter-spacing: -1px; }
+  .container h3, .container h4 {
     margin-top: 0; }
 
 #tooltip {
-  background-color: #31C8D1;
+  background-color: #1E8AB9;
   position: absolute;
+  width: 300px;
   border-radius: 5px;
   font-size: 1rem;
-  padding: 0.125rem 0.25rem; }
+  padding: 0.125rem 0.25rem;
+  opacity: 0.9;
+  box-shadow: 3px 3px 5px black; }
   #tooltip p {
     line-height: 1rem;
     margin: 0.25rem;
-    color: #456478; }
+    color: #FFFFFF; }
+  #tooltip a {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFFFFF;
+    letter-spacing: -1px; }
   #tooltip::after {
     content: " ";
     width: 0;
     height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-top: 10px solid #31C8D1;
+    border-top: 10px solid #1E8AB9;
     position: absolute;
-    left: 57px;
+    left: 140px;
     bottom: -10px; }
 
 .hidden {
@@ -48,12 +58,17 @@ body {
 svg {
   display: block;
   margin: auto;
-  background-color: rgba(255, 255, 255, 0.9); }
+  background-color: rgba(255, 255, 255, 0.5); }
 
 .racer {
-  fill: #FFC728; }
+  fill: #FF7222; }
   .racer:hover {
-    fill: #FF5A28; }
+    fill: #F7C41D; }
+
+.axis-label {
+  fill: black;
+  font-size: 20px;
+  stroke: #1E8AB9; }
 
 footer {
   background-color: black;

@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow');
-$lightblue: #31C8D1;
-$darkblue : #456478;
-$orange: #FF5A28;
-$yellow: #FFC728;
+@import url('https://fonts.googleapis.com/css?family=Rajdhani');
+
+$blue: #1E8AB9;
+$orange: #FF7222;
+$yellow: #F7C41D;
+$red: #FF2929;
+$white: #FFFFFF;
 $background: #F4F1EC;
 
 html,
@@ -11,70 +13,88 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
-  font-family: 'Archivo Narrow', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 .container {
   min-height: 100%;
   margin: auto;
   position: relative;
-  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)),
-                url("../../images/mountain-road.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)),
+  url("../../images/mountain-road.jpg") no-repeat center;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  h1, h4{
+  h1, h3, h4 {
     text-align: center;
     margin-bottom: 0;
+    letter-spacing: -1px;
   }
-  h4{
+  h3, h4 {
     margin-top: 0;
   }
 }
 
-#tooltip{
-  background-color: $lightblue;
+#tooltip {
+  background-color: $blue;
   position: absolute;
+  width: 300px;
   border-radius: 5px;
   font-size: 1rem;
   padding: 0.125rem 0.25rem;
+  opacity: 0.9;
+  box-shadow: 3px 3px 5px black;
   p {
     line-height: 1rem;
     margin: 0.25rem;
-    color: $darkblue;
+    color: $white;
   }
 
-  &::after{
+  a {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $white;
+    letter-spacing: -1px;
+  }
+
+  &::after {
     content: " ";
     width: 0;
     height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-top: 10px solid $lightblue;
+    border-top: 10px solid $blue;
     position: absolute;
-    left: 57px;
+    left: 140px;
     bottom: -10px;
   }
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
-svg{
+svg {
   display: block;
   margin: auto;
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .racer {
-  fill: $yellow;
+  fill: $orange;
   &:hover {
-    fill: $orange;
+    fill: $yellow;
   }
 }
 
-footer{
+.axis-label {
+  fill: black;
+  font-size: 20px;
+  stroke: $blue;
+}
+
+footer {
   background-color: black;
   padding: 1rem;
   text-align: center;
