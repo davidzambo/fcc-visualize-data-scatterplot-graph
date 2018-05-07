@@ -97,6 +97,7 @@ const generateContent = data => {
                 .text(d.Doping + ' ')
                 .append('a')
                 .attr('href', d.URL)
+                .attr('target', '_blank')
                 .text('Learn more');
             d3.select('#tooltip')
                 .style('left', (x - margin.left / 2 - 5) + "px")
